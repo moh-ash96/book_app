@@ -76,8 +76,9 @@ function createSearch(request, response) {
         .then(results => response.render('pages/searches/show', { searchResults: results }))
         // how will we handle errors?
         .catch((error) => {
+
             console.log(error)
-            console.log();
+            response.render('pages/error', {error:'Page Not Found'});
         });
 
 }
