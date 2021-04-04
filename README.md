@@ -7,6 +7,7 @@ This app allows users to search for books using google-books domain
 
 ## Getting Started
 * I should first build the index, server, and css files and include dependencies and libraries.
+* Then add a new search page to let the user add search information
 
 
 ## Architecture
