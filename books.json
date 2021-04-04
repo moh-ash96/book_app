@@ -1,0 +1,673 @@
+// 20210404162655
+// https://www.googleapis.com/books/v1/volumes?q=+intitle:dinosaur
+
+{
+    "kind": "books#volumes",
+    "totalItems": 491,
+    "items": [
+      {
+        "kind": "books#volume",
+        "id": "B-kpvYQ1PSEC",
+        "etag": "ID08itwT33A",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/B-kpvYQ1PSEC",
+        "volumeInfo": {
+          "title": "Dinosaur Rampage Activity Book",
+          "authors": [
+            "Chuck Whelon"
+          ],
+          "publisher": "Courier Corporation",
+          "publishedDate": "2012-11-21",
+          "description": "Guide a Maiasaura mother through a maze to her missing babies, spot the differences among a flock of pteranodons, match fossilized skulls to the appropriate species, and solve other wacky dinosaurian dilemmas. 27 puzzles.",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9780486480992"
+            },
+            {
+              "type": "ISBN_10",
+              "identifier": "0486480992"
+            }
+          ],
+          "readingModes": {
+            "text": false,
+            "image": true
+          },
+          "pageCount": 48,
+          "printType": "BOOK",
+          "categories": [
+            "Juvenile Nonfiction"
+          ],
+          "maturityRating": "NOT_MATURE",
+          "allowAnonLogging": false,
+          "contentVersion": "preview-1.0.0",
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=B-kpvYQ1PSEC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=B-kpvYQ1PSEC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+          },
+          "language": "en",
+          "previewLink": "http://books.google.jo/books?id=B-kpvYQ1PSEC&printsec=frontcover&dq=intitle:dinosaur&hl=&cd=1&source=gbs_api",
+          "infoLink": "http://books.google.jo/books?id=B-kpvYQ1PSEC&dq=intitle:dinosaur&hl=&source=gbs_api",
+          "canonicalVolumeLink": "https://books.google.com/books/about/Dinosaur_Rampage_Activity_Book.html?hl=&id=B-kpvYQ1PSEC"
+        },
+        "saleInfo": {
+          "country": "JO",
+          "saleability": "NOT_FOR_SALE",
+          "isEbook": false
+        },
+        "accessInfo": {
+          "country": "JO",
+          "viewability": "PARTIAL",
+          "embeddable": true,
+          "publicDomain": false,
+          "textToSpeechPermission": "ALLOWED",
+          "epub": {
+            "isAvailable": false
+          },
+          "pdf": {
+            "isAvailable": false
+          },
+          "webReaderLink": "http://play.google.com/books/reader?id=B-kpvYQ1PSEC&hl=&printsec=frontcover&source=gbs_api",
+          "accessViewStatus": "SAMPLE",
+          "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+          "textSnippet": "Guide a Maiasaura mother through a maze to her missing babies, spot the differences among a flock of pteranodons, match fossilized skulls to the appropriate species, and solve other wacky dinosaurian dilemmas. 27 puzzles."
+        }
+      },
+      {
+        "kind": "books#volume",
+        "id": "1hBxzQEACAAJ",
+        "etag": "CiiqANtcvg8",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/1hBxzQEACAAJ",
+        "volumeInfo": {
+          "title": "القدس",
+          "subtitle": "من بن جوريون الى نيتانياهو",
+          "authors": [
+            "القرعي، أحمد يوسف"
+          ],
+          "publishedDate": "1997",
+          "industryIdentifiers": [
+            {
+              "type": "OTHER",
+              "identifier": "OCLC:235974789"
+            }
+          ],
+          "readingModes": {
+            "text": false,
+            "image": false
+          },
+          "printType": "BOOK",
+          "maturityRating": "NOT_MATURE",
+          "allowAnonLogging": false,
+          "contentVersion": "preview-1.0.0",
+          "language": "en",
+          "previewLink": "http://books.google.jo/books?id=1hBxzQEACAAJ&dq=intitle:dinosaur&hl=&cd=2&source=gbs_api",
+          "infoLink": "http://books.google.jo/books?id=1hBxzQEACAAJ&dq=intitle:dinosaur&hl=&source=gbs_api",
+          "canonicalVolumeLink": "https://books.google.com/books/about/%D8%A7%D9%84%D9%82%D8%AF%D8%B3.html?hl=&id=1hBxzQEACAAJ"
+        },
+        "saleInfo": {
+          "country": "JO",
+          "saleability": "NOT_FOR_SALE",
+          "isEbook": false
+        },
+        "accessInfo": {
+          "country": "JO",
+          "viewability": "NO_PAGES",
+          "embeddable": false,
+          "publicDomain": false,
+          "textToSpeechPermission": "ALLOWED",
+          "epub": {
+            "isAvailable": false
+          },
+          "pdf": {
+            "isAvailable": false
+          },
+          "webReaderLink": "http://play.google.com/books/reader?id=1hBxzQEACAAJ&hl=&printsec=frontcover&source=gbs_api",
+          "accessViewStatus": "NONE",
+          "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+          "textSnippet": "Here&#39;s a preview of what you&#39;ll get from this heart warming children&#39;s coloring book: 40 single sided images so that crayons, colored pencils or markers will NOT bleed through.Top quality 60lb paper that is perfect for coloring.This ..."
+        }
+      },
+      {
+        "kind": "books#volume",
+        "id": "5rNhzQEACAAJ",
+        "etag": "eOUsvmvwqPU",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/5rNhzQEACAAJ",
+        "volumeInfo": {
+          "title": "Dinosaur Coloring Book for Kids",
+          "subtitle": "Great Dinosaur Coloring Book Gift for Boys, Girls, Toddlers, Preschoolers, Kids 3-8, 6-8 (Dinosaur Books)",
+          "authors": [
+            "Bright Life Time Books"
+          ],
+          "publishedDate": "2020-02-04",
+          "description": "Dinosaur coloring book for kids! This coloring book is perfect for toddlers, preschoolers, and kids of all ages who love dinosaurs! Featuring full page drawings of Tyrannosaurus Rex, Stegosaurus, Triceratops, Brontosaurus, and many more! This big coloring book is perfect for little hands. This children's dinosaur coloring book features: Large 8.5 x 11 inch pages Simple and cute designs for kids to color High-resolution printing Makes a great dinosaur-themed gift!",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9798609290106"
+            }
+          ],
+          "readingModes": {
+            "text": false,
+            "image": false
+          },
+          "pageCount": 34,
+          "printType": "BOOK",
+          "maturityRating": "NOT_MATURE",
+          "allowAnonLogging": false,
+          "contentVersion": "preview-1.0.0",
+          "panelizationSummary": {
+            "containsEpubBubbles": false,
+            "containsImageBubbles": false
+          },
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=5rNhzQEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=5rNhzQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+          },
+          "language": "en",
+          "previewLink": "http://books.google.jo/books?id=5rNhzQEACAAJ&dq=intitle:dinosaur&hl=&cd=3&source=gbs_api",
+          "infoLink": "http://books.google.jo/books?id=5rNhzQEACAAJ&dq=intitle:dinosaur&hl=&source=gbs_api",
+          "canonicalVolumeLink": "https://books.google.com/books/about/Dinosaur_Coloring_Book_for_Kids.html?hl=&id=5rNhzQEACAAJ"
+        },
+        "saleInfo": {
+          "country": "JO",
+          "saleability": "NOT_FOR_SALE",
+          "isEbook": false
+        },
+        "accessInfo": {
+          "country": "JO",
+          "viewability": "NO_PAGES",
+          "embeddable": false,
+          "publicDomain": false,
+          "textToSpeechPermission": "ALLOWED",
+          "epub": {
+            "isAvailable": false
+          },
+          "pdf": {
+            "isAvailable": false
+          },
+          "webReaderLink": "http://play.google.com/books/reader?id=5rNhzQEACAAJ&hl=&printsec=frontcover&source=gbs_api",
+          "accessViewStatus": "NONE",
+          "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+          "textSnippet": "Dinosaur coloring book for kids! This coloring book is perfect for toddlers, preschoolers, and kids of all ages who love dinosaurs! Featuring full page drawings of Tyrannosaurus Rex, Stegosaurus, Triceratops, Brontosaurus, and many more!"
+        }
+      },
+      {
+        "kind": "books#volume",
+        "id": "7wpdzQEACAAJ",
+        "etag": "OpwcWX9QSW0",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/7wpdzQEACAAJ",
+        "volumeInfo": {
+          "title": "Dinosaur Coloring Book",
+          "authors": [
+            "Mohamed Ashry"
+          ],
+          "publishedDate": "2020-01-27",
+          "description": "completely unique dinosaur coloring pages for kids ages 4-8!For the dinosaur-loving child, what could be more fun than being able to color all of his or her favorite types? Powerful meat-eaters and peaceful herbivores roam through this coloring book, enjoying their prehistoric habitats with trees, mountains, volcanoes and comets whizzing across the sky in the background. You will find all the most popular dinosaur types here--sometimes alone, sometimes interacting with one another! Buy this coloring book today and share the fun and excitement of dinosaurs with a special child! This coloring book is a great non-screen activity to stimulate a child's creativity and imagination. It makes a perfect gift!About this dinosaur coloring book: - Contains completely unique coloring pages. There are NO duplicate images in this book.- The pages are single-sided+C5 to prevent bleed-through, and so that pages can be removed and displayed without losing an image on the back.- We have carefully designed each page to be entertaining and suitable for children in the 4 to 8 year-old age range. We have avoided overly-intricate designs as well as overly-simplistic ones. We believe children of this age love coloring fun scenes that fire up their imaginations, not a book full of simple shapes.- The pages are a nice, large 8.5x11 size.",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9798605173939"
+            }
+          ],
+          "readingModes": {
+            "text": false,
+            "image": false
+          },
+          "pageCount": 114,
+          "printType": "BOOK",
+          "maturityRating": "NOT_MATURE",
+          "allowAnonLogging": false,
+          "contentVersion": "preview-1.0.0",
+          "panelizationSummary": {
+            "containsEpubBubbles": false,
+            "containsImageBubbles": false
+          },
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=7wpdzQEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=7wpdzQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+          },
+          "language": "en",
+          "previewLink": "http://books.google.jo/books?id=7wpdzQEACAAJ&dq=intitle:dinosaur&hl=&cd=4&source=gbs_api",
+          "infoLink": "http://books.google.jo/books?id=7wpdzQEACAAJ&dq=intitle:dinosaur&hl=&source=gbs_api",
+          "canonicalVolumeLink": "https://books.google.com/books/about/Dinosaur_Coloring_Book.html?hl=&id=7wpdzQEACAAJ"
+        },
+        "saleInfo": {
+          "country": "JO",
+          "saleability": "NOT_FOR_SALE",
+          "isEbook": false
+        },
+        "accessInfo": {
+          "country": "JO",
+          "viewability": "NO_PAGES",
+          "embeddable": false,
+          "publicDomain": false,
+          "textToSpeechPermission": "ALLOWED",
+          "epub": {
+            "isAvailable": false
+          },
+          "pdf": {
+            "isAvailable": false
+          },
+          "webReaderLink": "http://play.google.com/books/reader?id=7wpdzQEACAAJ&hl=&printsec=frontcover&source=gbs_api",
+          "accessViewStatus": "NONE",
+          "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+          "textSnippet": "This coloring book is a great non-screen activity to stimulate a child&#39;s creativity and imagination. It makes a perfect gift!About this dinosaur coloring book: - Contains completely unique coloring pages."
+        }
+      },
+      {
+        "kind": "books#volume",
+        "id": "yPK-xwEACAAJ",
+        "etag": "HN1lsdLasiw",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/yPK-xwEACAAJ",
+        "volumeInfo": {
+          "title": "Dinosaur Notebook",
+          "subtitle": "8.5 X 11 Wide Ruled Notebook For All Your Home, School And Business Note Needs",
+          "authors": [
+            "Jolly Dinosaurs"
+          ],
+          "publishedDate": "2019-07-24",
+          "description": "Dinosaur Notebook Features: 120 blank wide lined white pages Two-sided wide ruled sheets Perfect sturdy matte softbound cover 8.5\" x 11\" the perfect size for your purse, tote bag, desk, backpack, school, home or work Can be used as a notebook, journal, diary or composition book for school and work Great for taking notes, writing, organizing, lists, journaling and brainstorming Composition Notebooks make the perfect gift for adults and kids for any gift giving occasion",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_10",
+              "identifier": "1082425559"
+            },
+            {
+              "type": "ISBN_13",
+              "identifier": "9781082425554"
+            }
+          ],
+          "readingModes": {
+            "text": false,
+            "image": false
+          },
+          "pageCount": 122,
+          "printType": "BOOK",
+          "maturityRating": "NOT_MATURE",
+          "allowAnonLogging": false,
+          "contentVersion": "preview-1.0.0",
+          "panelizationSummary": {
+            "containsEpubBubbles": false,
+            "containsImageBubbles": false
+          },
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=yPK-xwEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=yPK-xwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+          },
+          "language": "en",
+          "previewLink": "http://books.google.jo/books?id=yPK-xwEACAAJ&dq=intitle:dinosaur&hl=&cd=5&source=gbs_api",
+          "infoLink": "http://books.google.jo/books?id=yPK-xwEACAAJ&dq=intitle:dinosaur&hl=&source=gbs_api",
+          "canonicalVolumeLink": "https://books.google.com/books/about/Dinosaur_Notebook.html?hl=&id=yPK-xwEACAAJ"
+        },
+        "saleInfo": {
+          "country": "JO",
+          "saleability": "NOT_FOR_SALE",
+          "isEbook": false
+        },
+        "accessInfo": {
+          "country": "JO",
+          "viewability": "NO_PAGES",
+          "embeddable": false,
+          "publicDomain": false,
+          "textToSpeechPermission": "ALLOWED",
+          "epub": {
+            "isAvailable": false
+          },
+          "pdf": {
+            "isAvailable": false
+          },
+          "webReaderLink": "http://play.google.com/books/reader?id=yPK-xwEACAAJ&hl=&printsec=frontcover&source=gbs_api",
+          "accessViewStatus": "NONE",
+          "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+          "textSnippet": "Dinosaur Notebook Features: 120 blank wide lined white pages Two-sided wide ruled sheets Perfect sturdy matte softbound cover 8.5&quot; x 11&quot; the perfect size for your purse, tote bag, desk, backpack, school, home or work Can be used as a ..."
+        }
+      },
+      {
+        "kind": "books#volume",
+        "id": "l1BZzQEACAAJ",
+        "etag": "wH0sO/fryN0",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/l1BZzQEACAAJ",
+        "volumeInfo": {
+          "title": "Dinosaur Coloring Book for Kids",
+          "subtitle": "Great Gift Birthday for Your Boys and Girls Ages 4-8 Years Old, Fantastic Learning and Fun with Cute Design for Toddlers, Preschools.",
+          "authors": [
+            "Andre Colorbooks"
+          ],
+          "publishedDate": "2020-02-22",
+          "description": "Dinosaurs coloring book a great gift for Boys and Girls! Large 8 1/2 x 11 inch, 101 pages Printed on heavy-duty bright white paper Printed single side for ease of removal and display Simple and cute designs for kids to color High-resolution printing Made in USA Order today!",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_13",
+              "identifier": "9798616387585"
+            }
+          ],
+          "readingModes": {
+            "text": false,
+            "image": false
+          },
+          "pageCount": 102,
+          "printType": "BOOK",
+          "maturityRating": "NOT_MATURE",
+          "allowAnonLogging": false,
+          "contentVersion": "preview-1.0.0",
+          "panelizationSummary": {
+            "containsEpubBubbles": false,
+            "containsImageBubbles": false
+          },
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=l1BZzQEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=l1BZzQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+          },
+          "language": "en",
+          "previewLink": "http://books.google.jo/books?id=l1BZzQEACAAJ&dq=intitle:dinosaur&hl=&cd=6&source=gbs_api",
+          "infoLink": "http://books.google.jo/books?id=l1BZzQEACAAJ&dq=intitle:dinosaur&hl=&source=gbs_api",
+          "canonicalVolumeLink": "https://books.google.com/books/about/Dinosaur_Coloring_Book_for_Kids.html?hl=&id=l1BZzQEACAAJ"
+        },
+        "saleInfo": {
+          "country": "JO",
+          "saleability": "NOT_FOR_SALE",
+          "isEbook": false
+        },
+        "accessInfo": {
+          "country": "JO",
+          "viewability": "NO_PAGES",
+          "embeddable": false,
+          "publicDomain": false,
+          "textToSpeechPermission": "ALLOWED",
+          "epub": {
+            "isAvailable": false
+          },
+          "pdf": {
+            "isAvailable": false
+          },
+          "webReaderLink": "http://play.google.com/books/reader?id=l1BZzQEACAAJ&hl=&printsec=frontcover&source=gbs_api",
+          "accessViewStatus": "NONE",
+          "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+          "textSnippet": "Dinosaurs coloring book a great gift for Boys and Girls!"
+        }
+      },
+      {
+        "kind": "books#volume",
+        "id": "tFSYPAAACAAJ",
+        "etag": "oSGW+YISn7A",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/tFSYPAAACAAJ",
+        "volumeInfo": {
+          "title": "Gollancz Dinosaur Encyclopaedia for Children",
+          "authors": [
+            "Philip Whitfield"
+          ],
+          "publishedDate": "1992",
+          "description": "With each one illustrated in colour, this book features more than 125 dinosaurs and other prehistoric animals. Information is provided on their vital statistics and lifestyles, and five time-sections catalogue the animals, which are then grouped geographically. A focus within each section looks at a particular creature in greater detail, and panoramic spreads recreate different prehistoric landscapes, supported by annotations, maps and diagrams.",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_10",
+              "identifier": "0575053658"
+            },
+            {
+              "type": "ISBN_13",
+              "identifier": "9780575053656"
+            }
+          ],
+          "readingModes": {
+            "text": false,
+            "image": false
+          },
+          "pageCount": 96,
+          "printType": "BOOK",
+          "categories": [
+            "Animals, Fossil"
+          ],
+          "maturityRating": "NOT_MATURE",
+          "allowAnonLogging": false,
+          "contentVersion": "preview-1.0.0",
+          "language": "en",
+          "previewLink": "http://books.google.jo/books?id=tFSYPAAACAAJ&dq=intitle:dinosaur&hl=&cd=7&source=gbs_api",
+          "infoLink": "http://books.google.jo/books?id=tFSYPAAACAAJ&dq=intitle:dinosaur&hl=&source=gbs_api",
+          "canonicalVolumeLink": "https://books.google.com/books/about/Gollancz_Dinosaur_Encyclopaedia_for_Chil.html?hl=&id=tFSYPAAACAAJ"
+        },
+        "saleInfo": {
+          "country": "JO",
+          "saleability": "NOT_FOR_SALE",
+          "isEbook": false
+        },
+        "accessInfo": {
+          "country": "JO",
+          "viewability": "NO_PAGES",
+          "embeddable": false,
+          "publicDomain": false,
+          "textToSpeechPermission": "ALLOWED",
+          "epub": {
+            "isAvailable": false
+          },
+          "pdf": {
+            "isAvailable": false
+          },
+          "webReaderLink": "http://play.google.com/books/reader?id=tFSYPAAACAAJ&hl=&printsec=frontcover&source=gbs_api",
+          "accessViewStatus": "NONE",
+          "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+          "textSnippet": "With each one illustrated in colour, this book features more than 125 dinosaurs and other prehistoric animals."
+        }
+      },
+      {
+        "kind": "books#volume",
+        "id": "ZAnsrwAuA8YC",
+        "etag": "P3zeT+nRpv0",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/ZAnsrwAuA8YC",
+        "volumeInfo": {
+          "title": "Dinosaur James",
+          "authors": [
+            "Scott Taylor"
+          ],
+          "publisher": "William Morrow & Company",
+          "publishedDate": "1990",
+          "description": "People doubt the value of James's dinosaur obsession, until it helps him deal with the playground bully.",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_10",
+              "identifier": "0688085768"
+            },
+            {
+              "type": "ISBN_13",
+              "identifier": "9780688085766"
+            }
+          ],
+          "readingModes": {
+            "text": false,
+            "image": false
+          },
+          "pageCount": 32,
+          "printType": "BOOK",
+          "categories": [
+            "1Bullies"
+          ],
+          "maturityRating": "NOT_MATURE",
+          "allowAnonLogging": false,
+          "contentVersion": "0.0.1.0.preview.0",
+          "panelizationSummary": {
+            "containsEpubBubbles": false,
+            "containsImageBubbles": false
+          },
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=ZAnsrwAuA8YC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=ZAnsrwAuA8YC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+          },
+          "language": "en",
+          "previewLink": "http://books.google.jo/books?id=ZAnsrwAuA8YC&dq=intitle:dinosaur&hl=&cd=8&source=gbs_api",
+          "infoLink": "http://books.google.jo/books?id=ZAnsrwAuA8YC&dq=intitle:dinosaur&hl=&source=gbs_api",
+          "canonicalVolumeLink": "https://books.google.com/books/about/Dinosaur_James.html?hl=&id=ZAnsrwAuA8YC"
+        },
+        "saleInfo": {
+          "country": "JO",
+          "saleability": "NOT_FOR_SALE",
+          "isEbook": false
+        },
+        "accessInfo": {
+          "country": "JO",
+          "viewability": "NO_PAGES",
+          "embeddable": false,
+          "publicDomain": false,
+          "textToSpeechPermission": "ALLOWED",
+          "epub": {
+            "isAvailable": false
+          },
+          "pdf": {
+            "isAvailable": false
+          },
+          "webReaderLink": "http://play.google.com/books/reader?id=ZAnsrwAuA8YC&hl=&printsec=frontcover&source=gbs_api",
+          "accessViewStatus": "NONE",
+          "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+          "textSnippet": "People doubt the value of James&#39;s dinosaur obsession, until it helps him deal with the playground bully."
+        }
+      },
+      {
+        "kind": "books#volume",
+        "id": "aevtywEACAAJ",
+        "etag": "FKjEV9gXmWo",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/aevtywEACAAJ",
+        "volumeInfo": {
+          "title": "Fantastic Dinosaur Coloring Book Party Favors for Kids",
+          "subtitle": "Dinosaur Painting and Drawing Pages Books for Kids and Adults Coloring Activity",
+          "authors": [
+            "FeverPaper Publishing"
+          ],
+          "publishedDate": "2019-10-28",
+          "description": "Fun to draw and paint for kids or adults. Content about Dinosaur coloring can be fun coloring. Is a game played during traveling. Dinosaur coloring book party favors for kids * Large 8 1/2 x 11 inch pages * Printed on high-quality, pure white paper * Travel Games * 100 Coloring Pages",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_10",
+              "identifier": "1703203364"
+            },
+            {
+              "type": "ISBN_13",
+              "identifier": "9781703203363"
+            }
+          ],
+          "readingModes": {
+            "text": false,
+            "image": false
+          },
+          "pageCount": 101,
+          "printType": "BOOK",
+          "maturityRating": "NOT_MATURE",
+          "allowAnonLogging": false,
+          "contentVersion": "preview-1.0.0",
+          "panelizationSummary": {
+            "containsEpubBubbles": false,
+            "containsImageBubbles": false
+          },
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=aevtywEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=aevtywEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+          },
+          "language": "en",
+          "previewLink": "http://books.google.jo/books?id=aevtywEACAAJ&dq=intitle:dinosaur&hl=&cd=9&source=gbs_api",
+          "infoLink": "http://books.google.jo/books?id=aevtywEACAAJ&dq=intitle:dinosaur&hl=&source=gbs_api",
+          "canonicalVolumeLink": "https://books.google.com/books/about/Fantastic_Dinosaur_Coloring_Book_Party_F.html?hl=&id=aevtywEACAAJ"
+        },
+        "saleInfo": {
+          "country": "JO",
+          "saleability": "NOT_FOR_SALE",
+          "isEbook": false
+        },
+        "accessInfo": {
+          "country": "JO",
+          "viewability": "NO_PAGES",
+          "embeddable": false,
+          "publicDomain": false,
+          "textToSpeechPermission": "ALLOWED",
+          "epub": {
+            "isAvailable": false
+          },
+          "pdf": {
+            "isAvailable": false
+          },
+          "webReaderLink": "http://play.google.com/books/reader?id=aevtywEACAAJ&hl=&printsec=frontcover&source=gbs_api",
+          "accessViewStatus": "NONE",
+          "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+          "textSnippet": "Fun to draw and paint for kids or adults."
+        }
+      },
+      {
+        "kind": "books#volume",
+        "id": "PKiUjwEACAAJ",
+        "etag": "IasDDv7TOz4",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/PKiUjwEACAAJ",
+        "volumeInfo": {
+          "title": "If I Were a Dinosaur",
+          "authors": [
+            "Mark Draeger"
+          ],
+          "publishedDate": "2016-02-17",
+          "description": "'If I Were a Dinosaur' is a fun, imaginative journey of a young boy's dream of being his favorite dinosaurs. Maybe the giant Brontosaurus or the armored Ankylosaurs, or just maybe the terrifying T-Rex! Join him on his silly adventure through the exciting world of dinosaurs.",
+          "industryIdentifiers": [
+            {
+              "type": "ISBN_10",
+              "identifier": "1504980697"
+            },
+            {
+              "type": "ISBN_13",
+              "identifier": "9781504980692"
+            }
+          ],
+          "readingModes": {
+            "text": false,
+            "image": false
+          },
+          "pageCount": 18,
+          "printType": "BOOK",
+          "maturityRating": "NOT_MATURE",
+          "allowAnonLogging": false,
+          "contentVersion": "preview-1.0.0",
+          "imageLinks": {
+            "smallThumbnail": "http://books.google.com/books/content?id=PKiUjwEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+            "thumbnail": "http://books.google.com/books/content?id=PKiUjwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+          },
+          "language": "en",
+          "previewLink": "http://books.google.jo/books?id=PKiUjwEACAAJ&dq=intitle:dinosaur&hl=&cd=10&source=gbs_api",
+          "infoLink": "http://books.google.jo/books?id=PKiUjwEACAAJ&dq=intitle:dinosaur&hl=&source=gbs_api",
+          "canonicalVolumeLink": "https://books.google.com/books/about/If_I_Were_a_Dinosaur.html?hl=&id=PKiUjwEACAAJ"
+        },
+        "saleInfo": {
+          "country": "JO",
+          "saleability": "NOT_FOR_SALE",
+          "isEbook": false
+        },
+        "accessInfo": {
+          "country": "JO",
+          "viewability": "NO_PAGES",
+          "embeddable": false,
+          "publicDomain": false,
+          "textToSpeechPermission": "ALLOWED",
+          "epub": {
+            "isAvailable": false
+          },
+          "pdf": {
+            "isAvailable": false
+          },
+          "webReaderLink": "http://play.google.com/books/reader?id=PKiUjwEACAAJ&hl=&printsec=frontcover&source=gbs_api",
+          "accessViewStatus": "NONE",
+          "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+          "textSnippet": "&#39;If I Were a Dinosaur&#39; is a fun, imaginative journey of a young boy&#39;s dream of being his favorite dinosaurs."
+        }
+      }
+    ]
+  }

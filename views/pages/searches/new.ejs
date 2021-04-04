@@ -10,18 +10,18 @@
 
 <body>
     <h2>Search By Title Or Author</h2>
-    <form action="/searches" method="GET">
+    <form action="/searches" method="POST">
         <input type="search" name="search" placeholder="Enter your search here" id="search" required>
         <fieldset>
             <label>
                 <span>Title</span>
-                <input type="radio" name="search" id="title" required>
+                <input type="radio" name="search" id="title" value="title" required>
             </label>
         </fieldset>
         <fieldset>
             <label>
                 <span>Author</span>
-                <input type="radio" name="search" id="author">
+                <input type="radio" name="search" id="author" value="author" required>
             </label>
         </fieldset>
         <button type="submit">Submit</button>
