@@ -26,6 +26,7 @@ This app allows users to search for books using google-books domain
 ## Change Log
 
 04-04-2021 2:52pm - Application now has a fully-functional express server, with GET and POST routes for the book resource.
+04-04-2021 9:38pm - Application has the google books API and full functional.
 
 ## Credits and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
