@@ -1,0 +1,26 @@
+{
+  "name": "book_app",
+  "version": "1.0.0",
+  "description": "**Author**: Mohammad Ashour  **Version**: 1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moh-ash96/book_app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moh-ash96/book_app/issues"
+  },
+  "homepage": "https://github.com/moh-ash96/book_app#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "i": "^0.3.6",
+    "superagent": "^6.1.0"
+  }
+}
