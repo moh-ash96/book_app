@@ -1,8 +1,11 @@
 'use strict';
 
+require('dotenv').config()
+
 // Application Dependencies
 const express = require('express');
 const superagent = require('superagent');
+const pg = require('pg');
 
 // Application Setup
 const app = express();
@@ -11,6 +14,11 @@ const PORT = process.env.PORT || 3030;
 // Application Middleware
 app.use(express.urlencoded({ extended: true })); // we use it when there is a complex object in json data (nested things)
 app.use(express.static('public')); // automatically creates routs for us based on the files in the folders 
+
+// Database Setup
+const client = new pg.Client(process.env.DATABASE_URL);
+// client.connect();
+client.on('error', err => console.log(err));
 
 // Set the view engine for server-side templating
 app.set('view engine', 'ejs');
@@ -24,6 +32,8 @@ app.get('/', renderHomePage);
 // Renders the search form
 app.get('/searches/new', showForm);
 
+app.get('/books/:id', getOne);
+
 // Creates a new search to the Google Books API
 app.post('/searches', createSearch);
 
@@ -31,7 +41,13 @@ app.post('/searches', createSearch);
 // Catch-all
 app.get('*', (request, response) => response.status(404).send('This route does not exist'));
 
-app.listen(PORT, () => console.log(`Listening on port: ${PORT}`));
+// app.listen(PORT, () => console.log(`Listening on port: ${PORT}`));
+
+client.connect().then(() =>{
+    app.listen(PORT, ()=>{
+        console.log(`App is listening on port ${PORT}`);
+    })
+})
 
 // HELPER FUNCTIONS
 // Only show part of this to get students started
@@ -52,7 +68,11 @@ function Book(volumeInfo) {
 // Note that .ejs file extension is not required
 
 function renderHomePage(request, response) {
-    response.render('pages/index')
+    const SQL = 'SELECT * FROM books;';
+    return client.query(SQL)
+    .then(results => response.render('pages/index', {results: results.rows}))
+    .catch((error)=> console.log(error));
+    // response.render('pages/index')
 }
 
 function showForm(request, response) {
@@ -80,5 +100,19 @@ function createSearch(request, response) {
             console.log(error)
             response.render('pages/error', {error:'Page Not Found'});
         });
+
+}
+
+
+
+function getOne(request, response){
+    
+    let sql = 'SELECT * books WHERE id=$1;'
+    console.log(request.params.id);
+    let values = [request.params.id];
+    return client.query(sql, values)
+    .then(result =>{
+        return response.render('pages/books/detail', {books: result.rows[0]})
+    }).catch(err =>console.log(err));
 
 }
