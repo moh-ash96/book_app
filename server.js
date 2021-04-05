@@ -9,8 +9,8 @@ const app = express();
 const PORT = process.env.PORT || 3030;
 
 // Application Middleware
-app.use(express.urlencoded({ extended: true }));
-app.use(express.static('public'));
+app.use(express.urlencoded({ extended: true })); // we use it when there is a complex object in json data (nested things)
+app.use(express.static('public')); // automatically creates routs for us based on the files in the folders 
 
 // Set the view engine for server-side templating
 app.set('view engine', 'ejs');
