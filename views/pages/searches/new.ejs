@@ -6,30 +6,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search</title>
+    <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="stylesheet" href="/styles/base.css">
+    <link rel="stylesheet" href="/styles/layout.css">
+    <link rel="stylesheet" href="/styles/modules.css">
+    <link rel="stylesheet" href="/styles/state.css">
 </head>
 
 <body>
-    <h2>Search By Title Or Author</h2>
-    <form action="/searches" method="POST">
-        <input type="search" name="search" placeholder="Enter your search here" id="search" required>
-        <fieldset>
-            <label>
-                <span>Title</span>
-                <input type="radio" name="search" id="title" value="title" required>
-            </label>
-        </fieldset>
-        <fieldset>
-            <label>
-                <span>Author</span>
-                <input type="radio" name="search" id="author" value="author" required>
-            </label>
-        </fieldset>
-        <button type="submit">Submit</button>
-    </form>
-
-
-
-
+<div id="searchHeader">
+    <a href="/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOKmfEmOxO47yi06iwT00ANqk6L9kbus7r7Q&usqp=CAU" alt="home" id="icon"></a>
+    <h1>Best Books!</h1>
+</div>
+    <div id="searchBy">
+        <h2>Search By Title Or Author</h2>
+    </div>
+    
+    <div id="formDiv">
+        <form action="/searches" method="POST">
+            <input type="search" name="search" placeholder="Enter your search here" id="search" required>
+            <fieldset>
+                <label id="titleLabel">
+                    <span>Title</span>
+                    <input type="radio" name="search" id="title" value="title" required>
+                </label>
+            </fieldset>
+            <fieldset>
+                <label id="AuthorLabel">
+                    <span>Author</span>
+                    <input type="radio" name="search" id="author" value="author" required>
+                </label>
+            </fieldset>
+            <button type="submit">Search The Google Book API</button>
+        </form>
+    </div>
+        
+    <footer>Powered by google books</footer>
 </body>
+
+
 
 </html>
