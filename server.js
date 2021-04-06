@@ -6,17 +6,20 @@ require('dotenv').config()
 const express = require('express');
 const superagent = require('superagent');
 const pg = require('pg');
+const NODE_ENV = process.env.DATABASE_URL
 
 // Application Setup
 const app = express();
 const PORT = process.env.PORT || 3030;
+
+const options = NODE_ENV === 'production' ? { connectionString: DATABASE_URL, ssl: { rejectUnauthorized: false } } : { connectionString: DATABASE_URL };
 
 // Application Middleware
 app.use(express.urlencoded({ extended: true })); // we use it when there is a complex object in json data (nested things)
 app.use(express.static('public')); // automatically creates routs for us based on the files in the folders 
 
 // Database Setup
-const client = new pg.Client(process.env.DATABASE_URL);
+const client = new pg.Client(options);
 // client.connect();
 client.on('error', err => console.log(err));
 
