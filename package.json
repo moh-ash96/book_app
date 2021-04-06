@@ -18,9 +18,11 @@
   },
   "homepage": "https://github.com/moh-ash96/book_app#readme",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "i": "^0.3.6",
+    "pg": "^8.5.1",
     "superagent": "^6.1.0"
   }
 }

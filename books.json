@@ -1,6 +1,3 @@
-// 20210404162655
-// https://www.googleapis.com/books/v1/volumes?q=+intitle:dinosaur
-
 {
     "kind": "books#volumes",
     "totalItems": 491,

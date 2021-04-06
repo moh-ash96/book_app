@@ -1,16 +1,28 @@
 'use strict';
 
+require('dotenv').config()
+
 // Application Dependencies
 const express = require('express');
 const superagent = require('superagent');
+const pg = require('pg');
+const DATABASE_URL = process.env.DATABASE_URL;
+const NODE_ENV = process.env.NODE_ENV;
 
 // Application Setup
 const app = express();
 const PORT = process.env.PORT || 3030;
 
+const options = NODE_ENV === 'production' ? { connectionString: DATABASE_URL, ssl: { rejectUnauthorized: false } } : { connectionString: DATABASE_URL };
+
 // Application Middleware
 app.use(express.urlencoded({ extended: true })); // we use it when there is a complex object in json data (nested things)
 app.use(express.static('public')); // automatically creates routs for us based on the files in the folders 
+
+// Database Setup
+const client = new pg.Client(options);
+// client.connect();
+client.on('error', err => console.log(err));
 
 // Set the view engine for server-side templating
 app.set('view engine', 'ejs');
@@ -24,6 +36,8 @@ app.get('/', renderHomePage);
 // Renders the search form
 app.get('/searches/new', showForm);
 
+app.get('/books/:id', getOne);
+
 // Creates a new search to the Google Books API
 app.post('/searches', createSearch);
 
@@ -31,17 +45,24 @@ app.post('/searches', createSearch);
 // Catch-all
 app.get('*', (request, response) => response.status(404).send('This route does not exist'));
 
-app.listen(PORT, () => console.log(`Listening on port: ${PORT}`));
+// app.listen(PORT, () => console.log(`Listening on port: ${PORT}`));
+
+client.connect().then(() =>{
+    app.listen(PORT, ()=>{
+        console.log(`App is listening on port ${PORT}`);
+    })
+})
 
 // HELPER FUNCTIONS
 // Only show part of this to get students started
 function Book(volumeInfo) {
     const placeholderImage = 'https://i.imgur.com/J5LVHEL.jpg';
-    volumeInfo.imageLinks != undefined ? this.image = volumeInfo.imageLinks.thumbnail.replace(/^http:\/\//i, 'https://')
-        : this.image = placeholderImage;
+    volumeInfo.imageLinks != undefined ? this.image_url = volumeInfo.imageLinks.thumbnail.replace(/^http:\/\//i, 'https://')
+        : this.image_url = placeholderImage;
     this.title = volumeInfo.title || 'No title available'; // shortcircuit
     this.author = volumeInfo.authors || 'No Author information available';
     this.description = volumeInfo.description || 'No description available';
+    this.isbn = volumeInfo.industryIdentifiers[0].identifier || 'ISBN unavailable';
 }
 
 
@@ -52,7 +73,11 @@ function Book(volumeInfo) {
 // Note that .ejs file extension is not required
 
 function renderHomePage(request, response) {
-    response.render('pages/index')
+    const SQL = 'SELECT * FROM books;';
+    return client.query(SQL)
+    .then(result => response.render('pages/index', {books: result.rows}))
+    .catch((error)=> console.log(error));
+    // response.render('pages/index')
 }
 
 function showForm(request, response) {
@@ -65,7 +90,7 @@ function createSearch(request, response) {
     let url = 'https://www.googleapis.com/books/v1/volumes?q=';
 
     console.log(request.body);
-    console.log(request.body.search);
+    console.log(request.body.search)
 
 
     // can we convert this to ternary?
@@ -80,5 +105,19 @@ function createSearch(request, response) {
             console.log(error)
             response.render('pages/error', {error:'Page Not Found'});
         });
+
+}
+
+
+
+function getOne(request, response){
+    
+    let sql = 'SELECT * FROM books WHERE id=$1;'
+    console.log(request.params.id);
+    let values = [request.params.id];
+    return client.query(sql, values)
+    .then(result =>{
+        return response.render('pages/books/show', {book: result.rows[0]})
+    }).catch(err =>console.log(err));
 
 }
