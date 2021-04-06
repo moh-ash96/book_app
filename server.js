@@ -41,6 +41,8 @@ app.get('/books/:id', getOne);
 // Creates a new search to the Google Books API
 app.post('/searches', createSearch);
 
+app.post('/books', addToList);
+
 
 // Catch-all
 app.get('*', (request, response) => response.status(404).send('This route does not exist'));
@@ -120,4 +122,17 @@ function getOne(request, response){
         return response.render('pages/books/show', {book: result.rows[0]})
     }).catch(err =>console.log(err));
 
+}
+
+function addToList(request, response){
+    const book = request.body;
+    const sql = 'INSERT INTO books (title, description, image_url, author, isbn) VALUES ($1, $2, $3, $4, $5) RETURNING id;';
+    const values = [book.title, book.description, book.image_url, book.author, book.isbn];
+    client.query(sql, values)
+    .then(result =>{
+        response.redirect(`/books/${result.rows[0].id}`);
+    }).catch(error=>{
+        response.status(404).send("Something Went Wrong");
+        console.log(error);
+    });
 }
