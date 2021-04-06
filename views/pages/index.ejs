@@ -11,16 +11,12 @@
   <body>
     <main>
       <header>
+        <%- include('layout/header') %>
         <h4>Saved Books</h4>
-        <p> <%= results.length %> </p>
+        <p> <%= books.length %> </p>
       </header>
-      <% results.forEach(result =>{ %>
-      <div class="bookCards">
-        <img src="<%= result.image_url %>" alt="">
-        <h3><%= result.title %></h3>
-        <h4><%= result.author %></h4>
-        <a href="/"><button type="submit">View Details</button></a>
-      </div>
+      <% books.forEach((book)=>{ %>
+        <%- include('books/detail', {book}) %>
       <% }) %>
 
 

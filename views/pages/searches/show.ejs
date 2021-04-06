@@ -13,7 +13,7 @@
 <body>
     <main>
         <% searchResults.forEach(book=>{ %>
-            <img src="<%= book.image %>" alt="">
+            <img src="<%= book.image_url %>" alt="">
 
 
             <h3>
@@ -31,6 +31,10 @@
             <p>
                 <%= book.description %>
             </p>
+
+            <h5>
+               ISBN: <%= book.isbn %>
+            </h5>
             <% }) %>
     </main>
 </body>

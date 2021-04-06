@@ -53,11 +53,12 @@ client.connect().then(() =>{
 // Only show part of this to get students started
 function Book(volumeInfo) {
     const placeholderImage = 'https://i.imgur.com/J5LVHEL.jpg';
-    volumeInfo.imageLinks != undefined ? this.image = volumeInfo.imageLinks.thumbnail.replace(/^http:\/\//i, 'https://')
-        : this.image = placeholderImage;
+    volumeInfo.imageLinks != undefined ? this.image_url = volumeInfo.imageLinks.thumbnail.replace(/^http:\/\//i, 'https://')
+        : this.image_url = placeholderImage;
     this.title = volumeInfo.title || 'No title available'; // shortcircuit
     this.author = volumeInfo.authors || 'No Author information available';
     this.description = volumeInfo.description || 'No description available';
+    this.isbn = volumeInfo.industryIdentifiers[0].identifier || 'ISBN unavailable';
 }
 
 
@@ -70,7 +71,7 @@ function Book(volumeInfo) {
 function renderHomePage(request, response) {
     const SQL = 'SELECT * FROM books;';
     return client.query(SQL)
-    .then(results => response.render('pages/index', {results: results.rows}))
+    .then(result => response.render('pages/index', {books: result.rows}))
     .catch((error)=> console.log(error));
     // response.render('pages/index')
 }
@@ -85,7 +86,7 @@ function createSearch(request, response) {
     let url = 'https://www.googleapis.com/books/v1/volumes?q=';
 
     console.log(request.body);
-    console.log(request.body.search);
+    console.log(request.body.search)
 
 
     // can we convert this to ternary?
@@ -107,12 +108,12 @@ function createSearch(request, response) {
 
 function getOne(request, response){
     
-    let sql = 'SELECT * books WHERE id=$1;'
+    let sql = 'SELECT * FROM books WHERE id=$1;'
     console.log(request.params.id);
     let values = [request.params.id];
     return client.query(sql, values)
     .then(result =>{
-        return response.render('pages/books/detail', {books: result.rows[0]})
+        return response.render('pages/books/show', {book: result.rows[0]})
     }).catch(err =>console.log(err));
 
 }
