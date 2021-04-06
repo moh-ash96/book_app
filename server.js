@@ -6,7 +6,8 @@ require('dotenv').config()
 const express = require('express');
 const superagent = require('superagent');
 const pg = require('pg');
-const NODE_ENV = process.env.DATABASE_URL
+const DATABASE_URL = process.env.DATABASE_URL;
+const NODE_ENV = process.env.NODE_ENV;
 
 // Application Setup
 const app = express();
