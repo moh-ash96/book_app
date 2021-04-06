@@ -3,15 +3,18 @@
 
 <head>
     <title>Book Collection</title>
-    <link rel="stylesheet" href="/styles/reset.css">
+    <!-- <link rel="stylesheet" href="/styles/reset.css">
     <link rel="stylesheet" href="/styles/base.css">
     <link rel="stylesheet" href="/styles/layout.css">
     <link rel="stylesheet" href="/styles/modules.css">
-    <link rel="stylesheet" href="/styles/state.css">
+    <link rel="stylesheet" href="/styles/state.css"> -->
+    <%- include('../layout/head') %>
 </head>
 
 <body>
     <main>
+        <%- include('../layout/header') %>
+
         <% searchResults.forEach(book=>{ %>
             <%- include('../books/detail', {book}) %>
 
@@ -25,6 +28,7 @@
             </form>
                 <% }) %>
     </main>
+    <%- include('../layout/footer') %>
 </body>
 
 </html>
