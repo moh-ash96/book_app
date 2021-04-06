@@ -78,7 +78,7 @@ function renderHomePage(request, response) {
     const SQL = 'SELECT * FROM books;';
     return client.query(SQL)
     .then(result => response.render('pages/index', {books: result.rows}))
-    .catch((error)=> console.log(error));
+    .catch((error)=> handleError);
     // response.render('pages/index')
 }
 
@@ -102,11 +102,7 @@ function createSearch(request, response) {
         .then(apiResponse => apiResponse.body.items.map(bookResult => new Book(bookResult.volumeInfo)))
         .then(results => response.render('pages/searches/show', { searchResults: results }))
         // how will we handle errors?
-        .catch((error) => {
-
-            console.log(error)
-            response.render('pages/error', {error:'Page Not Found'});
-        });
+        .catch((error) => handleError);
 
 }
 
@@ -120,9 +116,9 @@ function getOne(request, response){
     return client.query(sql, values)
     .then(result =>{
         return response.render('pages/books/show', {book: result.rows[0]})
-    }).catch(err =>console.log(err));
+    }).catch(err =>handleError);
 
-}
+};
 
 function addToList(request, response){
     const book = request.body;
@@ -131,8 +127,10 @@ function addToList(request, response){
     client.query(sql, values)
     .then(result =>{
         response.redirect(`/books/${result.rows[0].id}`);
-    }).catch(error=>{
-        response.status(404).send("Something Went Wrong");
-        console.log(error);
-    });
+    }).catch(error=>handleError);
+}
+
+function handleError (error, response) {
+    response.render('pages/error-view', {error:'Something Went Wrong'});
+    console.log(error);
 }
