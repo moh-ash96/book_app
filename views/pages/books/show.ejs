@@ -11,6 +11,17 @@
     <%- include('../layout/header') %>
     <main>
         <%- include('detail') %>
+        <form action="/edit/<%= book.id %>" method="get">
+            <input type="hidden" name= "title" value="<%= book.title %>">
+            <input type="hidden" name= "author" value="<%= book.author %>">
+            <input type="hidden" name= "image_url" value="<%= book.image_url %>">
+            <input type="hidden" name= "description" value="<%= book.description %>">
+            <input type="hidden" name= "isbn" value="<%= book.isbn %>">
+            <button type="submit">Update</button>
+            </form>
+            <form action="/delete/<%= book.id %>?_method=DELETE" method="POST">
+            <button type="submit">Delete Book</button>
+            </form>
 
     </main>
     <%- include('../layout/footer') %>

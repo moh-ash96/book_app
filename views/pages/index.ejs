@@ -1,25 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+ <html lang="en">
+<!-- <head>
     <title>Book Collection</title>
-    <!-- <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="stylesheet" href="/styles/reset.css">
     <link rel="stylesheet" href="/styles/base.css">
     <link rel="stylesheet" href="/styles/layout.css">
     <link rel="stylesheet" href="/styles/modules.css">
     <link rel="stylesheet" href="/styles/state.css"> -->
-    <%- include('layout/head') %>
-  </head>
+    <%- include('layout/head', {title:'Book Collection'}) %>
+  <!-- </head> -->
   <body>
     <main>
-      <header>
         <%- include('layout/header') %>
-        <h4>Saved Books</h4>
-        <p> <%= books.length %> </p>
-      </header>
-      <% books.forEach((book)=>{ %>
-        <%- include('books/detail', {book}) %>
-      <% }) %>
-
+        <div id="saved-books">
+          <p id="db-num"> <%= books.length %> </p>
+          <h4>Saved Books</h4>
+        </div>
+        
+        <div id="cards-container">
+        <% books.forEach((book)=>{ %>
+            <%- include('books/detail', {book}) %>
+            <button class="btn1"><a class="bookBtn" href="/books/<%=book.id%>">View Details</a></button>
+            <% }) %>
+          </div>
+            
 
     </main>
     <%- include('layout/footer') %>

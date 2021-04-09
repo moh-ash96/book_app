@@ -1,9 +1,28 @@
 header{
     display: flex;
     justify-content: center;
-    /* align-items: center;
-    flex-direction: column; */
-    
+    background-color: black;
+    justify-content: space-between;
+}
+#saved-books{
+    background-color: #4A4A4A;
+    display: flex;
+    justify-content: center;
+}
+.card-div{
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    margin-top: 73px;
+    flex-direction: column;
+    margin: 6%;
+    background-color: #D8D8D8;
+}
+#cards-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 #searchHeader{
     background-color:#000000 ;

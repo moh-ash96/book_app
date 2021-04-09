@@ -8,6 +8,8 @@ const superagent = require('superagent');
 const pg = require('pg');
 const DATABASE_URL = process.env.DATABASE_URL;
 const NODE_ENV = process.env.NODE_ENV;
+const methodOverRide = require('method-override');
+const { request } = require('express');
 
 // Application Setup
 const app = express();
@@ -18,7 +20,7 @@ const options = NODE_ENV === 'production' ? { connectionString: DATABASE_URL, ss
 // Application Middleware
 app.use(express.urlencoded({ extended: true })); // we use it when there is a complex object in json data (nested things)
 app.use(express.static('public')); // automatically creates routs for us based on the files in the folders 
-
+app.use(methodOverRide('_method'));
 // Database Setup
 const client = new pg.Client(options);
 // client.connect();
@@ -43,8 +45,13 @@ app.post('/searches', createSearch);
 
 app.post('/books', addToList);
 
+app.get('/edit/:id', editOne);
 
-// Catch-all
+app.put('/update/:id', update);
+
+app.delete('/delete/:id', deleteBook);
+
+// Catch-all 
 app.get('*', (request, response) => response.status(404).send('This route does not exist'));
 
 // app.listen(PORT, () => console.log(`Listening on port: ${PORT}`));
@@ -53,7 +60,7 @@ client.connect().then(() =>{
     app.listen(PORT, ()=>{
         console.log(`App is listening on port ${PORT}`);
     })
-})
+});
 
 // HELPER FUNCTIONS
 // Only show part of this to get students started
@@ -78,21 +85,20 @@ function renderHomePage(request, response) {
     const SQL = 'SELECT * FROM books;';
     return client.query(SQL)
     .then(result => response.render('pages/index', {books: result.rows}))
-    .catch((error)=> handleError);
-    // response.render('pages/index')
-}
+    .catch((error)=> handleError(error, response));
+};
 
 function showForm(request, response) {
     response.render('pages/searches/new.ejs');
-}
+};
 
 // No API key required
 // Console.log request.body and request.body.search
 function createSearch(request, response) {
     let url = 'https://www.googleapis.com/books/v1/volumes?q=';
 
-    console.log(request.body);
-    console.log(request.body.search)
+    // console.log(request.body);
+    // console.log(request.body.search)
 
 
     // can we convert this to ternary?
@@ -102,7 +108,7 @@ function createSearch(request, response) {
         .then(apiResponse => apiResponse.body.items.map(bookResult => new Book(bookResult.volumeInfo)))
         .then(results => response.render('pages/searches/show', { searchResults: results }))
         // how will we handle errors?
-        .catch((error) => handleError);
+        .catch((error) => handleError(error, response));
 
 }
 
@@ -111,12 +117,12 @@ function createSearch(request, response) {
 function getOne(request, response){
     
     let sql = 'SELECT * FROM books WHERE id=$1;'
-    console.log(request.params.id);
+    // console.log(request.params.id);
     let values = [request.params.id];
     return client.query(sql, values)
     .then(result =>{
         return response.render('pages/books/show', {book: result.rows[0]})
-    }).catch(err =>handleError);
+    }).catch(error =>handleError(error, response))
 
 };
 
@@ -127,10 +133,38 @@ function addToList(request, response){
     client.query(sql, values)
     .then(result =>{
         response.redirect(`/books/${result.rows[0].id}`);
-    }).catch(error=>handleError);
+    }).catch(error=>handleError(error, response));
+}
+
+function editOne(request, response){
+    const sql = 'SELECT * FROM books WHERE id=$1;';
+    const values = [request.params.id];
+    console.log(request.params.id);
+    client.query(sql, values)
+    .then(results=>{
+        response.render('pages/books/edit', {book: results.rows[0]})
+    })
+    .catch(error=>handleError(error, response));
+}
+
+function update(request, response){
+    const sql ='UPDATE books SET image_url=$1,title=$2,author=$3,description=$4,isbn=$5 WHERE id=$6;';
+    const values = [request.body.image_url, request.body.title, request.body.author, request.body.description, request.body.isbn, request.params.id];
+    console.log(request.params.id);
+    client.query(sql, values)
+    .then(()=> response.redirect(`/books/${request.params.id}`))
+    .catch(error=> handleError(error, response))
+};
+function deleteBook(request, response){
+    const sql = 'DELETE FROM books WHERE id=$1;';
+    const value = [request.params.id];
+    client.query(sql, value)
+    .then(()=>response.redirect('/'))
+    .catch(error => handleError(error, response));
+
 }
 
 function handleError (error, response) {
-    response.render('pages/error-view', {error:'Something Went Wrong'});
+    response.render('pages/error', {error:'Something Went Wrong'});
     console.log(error);
-}
+};
