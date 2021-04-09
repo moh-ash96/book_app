@@ -148,8 +148,8 @@ function editOne(request, response){
 }
 
 function update(request, response){
-    const sql ='UPDATE books SET image_url=$1,title=$2,author=$3,description=$4,isbn=$5 WHERE id=$6;';
-    const values = [request.body.image_url, request.body.title, request.body.author, request.body.description, request.body.isbn, request.params.id];
+    const sql ='UPDATE books SET title=$1,author=$2,description=$3,isbn=$4 WHERE id=$5;';
+    const values = [request.body.title, request.body.author, request.body.description, request.body.isbn, request.params.id];
     console.log(request.params.id);
     client.query(sql, values)
     .then(()=> response.redirect(`/books/${request.params.id}`))

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
- <html lang="en">
+<html lang="en">
 <!-- <head>
     <title>Book Collection</title>
     <link rel="stylesheet" href="/styles/reset.css">
@@ -7,25 +7,33 @@
     <link rel="stylesheet" href="/styles/layout.css">
     <link rel="stylesheet" href="/styles/modules.css">
     <link rel="stylesheet" href="/styles/state.css"> -->
-    <%- include('layout/head', {title:'Book Collection'}) %>
+<%- include('layout/head', {title:'Book Collection'}) %>
   <!-- </head> -->
-  <body>
-    <main>
-        <%- include('layout/header') %>
-        <div id="saved-books">
-          <p id="db-num"> <%= books.length %> </p>
-          <h4>Saved Books</h4>
-        </div>
-        
-        <div id="cards-container">
-        <% books.forEach((book)=>{ %>
-            <%- include('books/detail', {book}) %>
-            <button class="btn1"><a class="bookBtn" href="/books/<%=book.id%>">View Details</a></button>
-            <% }) %>
-          </div>
-            
 
-    </main>
-    <%- include('layout/footer') %>
+  <body>
+    <div class="wrapper">
+
+      <main>
+        <%- include('layout/header') %>
+          <div id="saved-books">
+            <p id="db-num">
+              <%= books.length %>
+            </p>
+            <h4>Saved Books</h4>
+          </div>
+
+          <div id="cards-container">
+            <% books.forEach((book)=>{ %>
+              <%- include('books/detail', {book}) %>
+                <!-- <button class="btn1"><a class="bookBtn" href="/books/<%=book.id%>">View Details</a></button> -->
+                <% }) %>
+          </div>
+
+
+      </main>
+      <div class="push"></div>
+      <%- include('layout/footer') %>
+    </div>
   </body>
+
 </html>
