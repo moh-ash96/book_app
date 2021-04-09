@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('../layout/head', {title:'Update Details'}) %>
-<body>
-    <main>
-        <form action="/update/<%= book.id %>?_method=PUT" method="post" class="edit-book">
-            <input type="text" name="title" value="<%= book.title %>">
-            <input type="text" name="author" value="<%= book.author %>">
-            <input type="text" name="isbn" value="<%= book.isbn %>">
-            <input type="text" name="img-url" value="<%= book.image_url %>">
-            <!-- <input type="text" name="description" value="<%= book.description %>"> -->
-            <textarea name="description" id="" cols="103" rows="10"><%= book.description %></textarea>
-            <button type="submit" class="final-up">Update Book</button>
-        </form>
-    </main>
-</body>
+<%- include('../layout/head', {title:'Update Details'}) %>
+
+    <body>
+        <main>
+            <form action="/update/<%= book.id %>?_method=PUT" method="post" class="edit-book">
+                <input type="text" name="title" value="<%= book.title %>">
+                <input type="text" name="author" value="<%= book.author %>">
+                <input type="text" name="isbn" value="<%= book.isbn %>">
+                <input type="text" name="img-url" value="<%= book.image_url %>">
+                <textarea name="description" id="" cols="103" rows="10"><%= book.description %></textarea>
+                <button type="submit" class="final-up">Update Book</button>
+            </form>
+        </main>
+    </body>
+
 </html>

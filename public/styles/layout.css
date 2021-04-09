@@ -1,68 +1,73 @@
-form{
-    display: flex;
-    flex-direction: column;
-    margin-top: 7%;
-    align-items: center;
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 7%;
+  align-items: center;
 }
-header{
-    display: flex;
-    justify-content: center;
-    background-color: black;
-    justify-content: space-between;
+header {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  justify-content: space-between;
 }
-#saved-books{
-    background-color: #4A4A4A;
-    display: flex;
-    justify-content: center;
+#saved-books {
+  background-color: #4a4a4a;
+  display: flex;
+  justify-content: center;
 }
-.card-div{
-    display: flex;
-    /* flex-wrap: wrap; */
-    justify-content: center;
-    margin-top: 73px;
-    flex-direction: column;
-    margin: 6%;
-    background-color: #D8D8D8;
-    text-align: center;
+.card-div {
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+  margin-top: 73px;
+  flex-direction: column;
+  margin: 6%;
+  background-color: #d8d8d8;
+  text-align: center;
 }
-.detail-btn{
-    align-self: center;
-    width: 201px;
-    height: 102px;
-    font-size: 25px;
+.detail-btn {
+  align-self: center;
+  width: 201px;
+  height: 102px;
+  font-size: 25px;
 }
-.show-search .detail-btn, .show-search .update-form, .show-search .delete-form{
-    display: none;
+.show-search .detail-btn,
+.show-search .update-form,
+.show-search .delete-form {
+  display: none;
 }
-.book-detail .detail-btn, .book-detail #add{
-    display: none;
+.book-detail .detail-btn,
+.book-detail #add {
+  display: none;
 }
-#cards-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+#cards-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
-#cards-container #add, #cards-container .update-form, #cards-container .delete-form{
-    display: none;
+#cards-container #add,
+#cards-container .update-form,
+#cards-container .delete-form {
+  display: none;
 }
-#searchHeader{
-    background-color:#000000 ;
-    height: 20%;
-    display: flex;
-    flex-direction: row-reverse;
+#searchHeader {
+  background-color: #000000;
+  height: 20%;
+  display: flex;
+  flex-direction: row-reverse;
 }
-.searchBy{
-    background-color: #4A4A4A;
-    padding-bottom: 3%;
-    padding-top: 2%;
+.searchBy {
+  background-color: #4a4a4a;
+  padding-bottom: 3%;
+  padding-top: 2%;
 }
 
-.up-del{
-    display: flex;
-    justify-content: space-around;
+.up-del {
+  display: flex;
+  justify-content: space-around;
 }
-.edit-book{
-    display: flex;
-    flex-direction: column;
+.edit-book {
+  display: flex;
+  flex-direction: column;
 }
