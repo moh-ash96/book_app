@@ -1,48 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search</title>
-    <!-- <link rel="stylesheet" href="/styles/reset.css">
-    <link rel="stylesheet" href="/styles/base.css">
-    <link rel="stylesheet" href="/styles/layout.css">
-    <link rel="stylesheet" href="/styles/modules.css">
-    <link rel="stylesheet" href="/styles/state.css"> -->
-    <%- include('../layout/head') %>
-</head>
+<%- include('../layout/head', {title:'Search'}) %>
 
-<body>
-<div id="searchHeader">
-    <%- include('../layout/header') %>
-</div>
-    <div id="searchBy">
-        <h2>Search By Title Or Author</h2>
-    </div>
-    
-    <div id="formDiv">
-        <form action="/searches" method="POST">
-            <input type="search" name="search" placeholder="Enter your search here" id="search" required>
-            <fieldset>
-                <label id="titleLabel">
-                    <span>Title</span>
-                    <input type="radio" name="search" id="title" value="title" required>
-                </label>
-            </fieldset>
-            <fieldset>
-                <label id="AuthorLabel">
-                    <span>Author</span>
-                    <input type="radio" name="search" id="author" value="author" required>
-                </label>
-            </fieldset>
-            <button type="submit">Search The Google Book API</button>
-        </form>
-    </div>
-        
-    <%- include('../layout/footer') %>
-</body>
+    <body>
+        <div class="wrapper">
+            <main>
+            <%- include('../layout/header') %>
+
+                    <div class="searchBy">
+                        <h2>Search By Title Or Author</h2>
+                    </div>
+
+                    <div id="formDiv">
+                        <form action="/searches" method="POST">
+                            <input type="search" name="search" placeholder="Enter your search here" id="search"
+                                required>
+                            <fieldset>
+                                <label id="titleLabel">
+                                    <span>Title</span>
+                                    <input type="radio" name="search" id="title" value="title" required>
+                                </label>
+                            </fieldset>
+                            <fieldset>
+                                <label id="AuthorLabel">
+                                    <span>Author</span>
+                                    <input type="radio" name="search" id="author" value="author" required>
+                                </label>
+                            </fieldset>
+                            <button type="submit">Search The Google Book API</button>
+                        </form>
+                    </div>
+                </main>
+                <div class="push"></div>
+                <%- include('../layout/footer') %>
+        </div>
+    </body>
 
 
 
